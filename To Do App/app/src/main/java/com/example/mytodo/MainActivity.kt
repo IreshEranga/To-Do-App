@@ -11,6 +11,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
+        //setContentView(R.layout.activity_start_page)
         setContentView(binding.root)
 
         binding.addButton.setOnClickListener{
