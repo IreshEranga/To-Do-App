@@ -2,13 +2,11 @@ package com.example.mytodo
 
 import android.content.Context
 import android.content.Intent
-import android.icu.text.Transliterator.Position
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.view.menu.MenuView.ItemView
 import androidx.recyclerview.widget.RecyclerView
 
 class TasksAdapter(private var tasks: List<Task>, context: Context):RecyclerView.Adapter<TasksAdapter.TaskViewHolder>() {
@@ -16,7 +14,7 @@ class TasksAdapter(private var tasks: List<Task>, context: Context):RecyclerView
     class TaskViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val titleTextView: TextView = itemView.findViewById(R.id.titleTextView)
         val contentTextView: TextView = itemView.findViewById(R.id.contentTextView)
-        val updateButton: ImageView = itemView.findViewById(R.id.updateSaveButton)
+        val updateButton: ImageView = itemView.findViewById(R.id.updateButton)
 
     }
 
@@ -33,7 +31,7 @@ class TasksAdapter(private var tasks: List<Task>, context: Context):RecyclerView
         holder.contentTextView.text = task.content
 
         holder.updateButton.setOnClickListener{
-            val intent = Intent(holder.itemView.context, UpdateActivity::class.java).apply {
+            val intent = Intent(holder.itemView.context, UpdateTaskActivity::class.java).apply {
                 putExtra("task_id",task.id)
             }
             holder.itemView.context.startActivity(intent)
