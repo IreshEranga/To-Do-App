@@ -7,12 +7,121 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/num1"
+        android:layout_width="158dp"
+        android:layout_height="34dp"
+        android:text="Number 1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.095"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.042" />
+
+    <EditText
+        android:id="@+id/editTextNumber1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="179dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/num1" />
+
+    <TextView
+        android:id="@+id/num2"
+        android:layout_width="159dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="228dp"
+        android:layout_marginBottom="9dp"
+        android:text="Number 2"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNumber2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber1" />
+
+    <EditText
+        android:id="@+id/editTextNumber2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="177dp"
+        android:layout_marginBottom="52dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/buttonPlus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/num2" />
+
+    <Button
+        android:id="@+id/buttonPlus"
+        android:layout_width="108dp"
+        android:layout_height="118dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="271dp"
+        android:backgroundTint="#009688"
+        android:onClick="buttonClick"
+        android:text="+"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber2" />
+
+    <Button
+        android:id="@+id/buttonMinus"
+        android:layout_width="108dp"
+        android:layout_height="111dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="284dp"
+        android:layout_marginEnd="68dp"
+        android:backgroundTint="#B51D1D"
+        android:onClick="buttonClick"
+        android:text="-"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonPlus"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonmul"
+        android:layout_width="111dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="107dp"
+        android:layout_marginEnd="271dp"
+        android:layout_marginBottom="174dp"
+        android:backgroundTint="#2196F3"
+        android:onClick="buttonClick"
+        android:text="*"
+        android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonPlus" />
+
+    <Button
+        android:id="@+id/buttondiv"
+        android:layout_width="124dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="74dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="134dp"
+        android:backgroundTint="#FFC107"
+        android:onClick="buttonClick"
+        android:text="/"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonmul"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMinus" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
